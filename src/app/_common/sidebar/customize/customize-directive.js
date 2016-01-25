@@ -1,12 +1,10 @@
 modularAdmin.app
 
-.directive('themeLink', function($log, $timeout, customizeService) {
+.directive('themeLink', function($log, customizeService) {
 
 	function link($scope, $element) {
 		
-		$timeout(function(){
-			setStyleLink();
-		});
+		setStyleLink();
 
 		$scope.$watch('themeColor', function(){
 			setStyleLink();
@@ -32,7 +30,7 @@ modularAdmin.app
 		link: link,
 		controller: "CustomizeCtrl",
 		scope: {
-			themeColor: '='
+			themeColor: '@'
 		}
 	});
 
