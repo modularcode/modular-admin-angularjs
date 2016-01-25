@@ -1,0 +1,193 @@
+<aside class="sidebar" ng-controller="SidebarCtrl as sidebar">
+	<div class="sidebar-container">
+
+		<ng-include src="'templates/app/_common/sidebar/header/header.html'" include-replace></ng-include>
+
+		<nav class="menu">
+			<ul class="nav metismenu" id="sidebar-menu" sidebar-dropdown>
+
+				<li ui-sref-active="active">
+					<a ui-sref="app.dashboard">
+						<i class="fa fa-home"></i> Dashboard
+					</a>
+				</li>
+
+
+				<li ui-sref-active="active open">
+
+					<a href="">
+						<i class="fa fa-th-large"></i> Items Manager
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul>
+						<li>
+							<a ui-sref="app.itemsList">
+								Items List
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.itemsEditor">
+								Item Editor
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li ui-sref-active="active open">
+					<a href="">
+						<i class="fa fa-bar-chart"></i> Charts 
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul>
+						<li>
+							<a ui-sref="app.chartsFlot">
+								Flot Charts
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.chartsMorris">
+								Morris Charts
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li ui-sref-active="active open">
+					<a href="">
+						<i class="fa fa-table"></i> Tables
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul>
+						<li>
+							<a ui-sref="app.tablesStatic">
+								Static Tables
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.tablesResponsive">
+								Responsive Tables
+							</a>
+						</li>
+
+					</ul>
+				</li>
+
+				<li ui-sref-active="active">
+					<a ui-sref="app.forms">
+						<i class="fa fa-pencil-square-o"></i> Forms
+					</a>
+				</li>
+
+				<li ui-sref-active="active open">
+					<a href="">
+						<i class="fa fa-desktop"></i> UI Elements
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul>
+						<li>
+							<a ui-sref="app.buttons">
+								Buttons
+							</a>
+						</li>
+						
+						<li>
+							<a ui-sref="app.cards">
+								Cards
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.typography">
+								Typography
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.icons">
+								Icons
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.grid">
+								Grid
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li ui-sref-active="active open">
+
+					<a href="">
+						<i class="fa fa-file-text-o"></i> Pages
+						<i class="fa arrow"></i>
+					</a>
+
+					<ul>
+						<li>
+							<a ui-sref="auth.login">
+								Login
+							</a>
+						</li>
+						
+						<li>
+							<a ui-sref="auth.signup">
+								Sign Up
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="auth.reset">
+								Reset
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.error404">
+								Error 404 App
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.error404Alt">
+								Error 404 Global
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.error500">
+								Error 500 App
+							</a>
+						</li>
+
+						<li>
+							<a ui-sref="app.error500Alt">
+								Error 500 Global
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li ui-sref-active="active">
+					<a href="https://github.com/modularcode/modular-admin-angular">
+						<i class="fa fa-github-alt"></i> Theme Docs
+					</a>
+				</li>
+
+
+			</ul>
+		</nav>
+
+	</div>
+
+	<ng-include src="'templates/app/_common/sidebar/customize/customize.html'" include-replace></ng-include>
+
+</aside>
+<div class="sidebar-overlay" id="sidebar-overlay" ng-click="app.sidebar.controls.hide()"></div>

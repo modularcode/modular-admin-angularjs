@@ -1,0 +1,23 @@
+<div class="main-wrapper">
+    <div class="app" id="app"
+        ng-class="{
+            'sidebar-open': app.sidebar.controls.isVisible(),
+            'header-fixed': main.themeSettings.controls.getThemeSettingItem('headerFixed'),
+            'sidebar-fixed': main.themeSettings.controls.getThemeSettingItem('sidebarFixed'),
+            'footer-fixed':  main.themeSettings.controls.getThemeSettingItem('footerFixed')
+        }">
+        <!-- Default header block -->
+        <ng-include src="'templates/app/_common/header/header.html'" include-replace></ng-include>
+
+        <!-- Default sidebar block -->
+        <ng-include src="'templates/app/_common/sidebar/sidebar.html'" include-replace></ng-include>
+
+        <!-- Content section -->
+        <article class="content {{pagename}}-page">
+            <div ui-view></div>
+        </article>
+
+        <!-- Default footer block -->
+        <ng-include src="'templates/app/_common/footer/footer.html'" include-replace></ng-include>
+    </div>
+</div>  
