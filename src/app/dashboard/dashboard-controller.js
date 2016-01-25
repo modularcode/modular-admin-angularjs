@@ -4,7 +4,7 @@
 
 modularAdmin.app
 
-.controller("DashboardCtrl", function($log) {
+.controller("DashboardController", function($log) {
 
 	var vm = this;
 

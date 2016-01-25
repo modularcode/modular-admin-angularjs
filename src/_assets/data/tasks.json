@@ -1,0 +1,56 @@
+{
+  "tasks": [
+    {
+      "title": "Meeting with embassador",
+      "done": true
+    },
+    {
+      "title": "Confession",
+      "done": true
+    },
+    {
+      "title": "Time to start building an ark",
+      "done": false
+    },
+    {
+      "title": "Beer time with dudes",
+      "done": false
+    },
+    {
+      "title": "Meeting new girls",
+      "done": true
+    },
+    {
+      "title": "Remember damned home address",
+      "done": false
+    },
+    {
+      "title": "Get home before you got sleep",
+      "done": false
+    },
+    {
+      "title": "Meeting with embassador",
+      "done": true
+    },
+    {
+      "title": "Confession",
+      "done": true
+    },
+    {
+      "title": "Time to start building an ark",
+      "done": false
+    },
+    {
+      "title": "Beer time with dudes",
+      "done": false
+    },
+    {
+      "title": "Meeting new girls",
+      "done": true
+    },
+    {
+      "title": "Remember damned home address",
+      "done": false
+    }
+  ]
+}

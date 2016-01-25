@@ -4,7 +4,7 @@
 
 modularAdmin.app
 
-.controller("AppCtrl", function($log, sidebarService) {
+.controller("AppController", function($log, sidebarService) {
 
 	var vm = this;
 

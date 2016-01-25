@@ -9,7 +9,6 @@ modularAdmin.common
 			
 			$element.prev().on('click', function(){
 
-				console.log($scope);
 				$element.addClass(animationName)
 				.one(animationEnd, 
 					function(){
