@@ -13,7 +13,7 @@
 				</li>
 
 
-				<li ui-sref-active="active open">
+				<li ng-class="{'active open': SidebarCtrl.isActive(['app.itemsList', 'app.itemsEditor'])}">
 
 					<a href="">
 						<i class="fa fa-th-large"></i> Items Manager
@@ -21,13 +21,13 @@
 					</a>
 
 					<ul>
-						<li>
+						<li ui-sref-active="active">
 							<a ui-sref="app.itemsList">
 								Items List
 							</a>
 						</li>
 
-						<li>
+						<li ui-sref-active="active">
 							<a ui-sref="app.itemsEditor">
 								Item Editor
 							</a>
