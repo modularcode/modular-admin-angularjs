@@ -1,0 +1,40 @@
+{
+  "stats": [
+    {
+      "name": "Active items",
+      "value": "5407",
+      "progress": "75",
+      "icon": "rocket"
+    },
+    {
+      "name": "Items sold",
+      "value": "78464",
+      "progress": 25,
+      "icon": "shopping-cart"
+    },
+    {
+      "name": "Monthly income",
+      "value": "$80.560",
+      "progress": "60",
+      "icon": "line-chart"
+    },
+    {
+      "name": "Total users",
+      "value": "359",
+      "progress": "34",
+      "icon": "users"
+    },
+    {
+      "name": "Tickets closed",
+      "value": "59",
+      "progress": "49",
+      "icon": "list-alt"
+    },
+    {
+      "name": "Total income",
+      "value": "$780.064",
+      "progress": "15",
+      "icon": "dollar"
+    }
+  ]
+}
