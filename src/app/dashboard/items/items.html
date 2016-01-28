@@ -1,4 +1,4 @@
-<div class="card sameheight-item items" data-exclude="xs,sm,lg">
+<div class="card sameheight-item items" data-exclude="xs,sm,lg" ng-controller="DashboardItemsListController as DashboardItemsListCtrl">
 	<div class="card-header bordered">
 		<div class="header-block">
 			<h3 class="title">
@@ -49,43 +49,41 @@
 				</div>
 			</div>
 		</li>
-		{{#each items}}
-			<li class="item">	
-				<div class="item-row">
-					<div class="item-col fixed item-col-img xs">
-						<a href="">
-							<div class="item-img xs rounded" style="background-image: url({{this.img}})"></div>
+		<li class="item" ng-repeat="item in DashboardItemsListCtrl.items">	
+			<div class="item-row">
+				<div class="item-col fixed item-col-img xs">
+					<a href="">
+						<div class="item-img xs rounded" style="background-image: url({{item.img}})"></div>
+					</a>
+				</div>
+				<div class="item-col item-col-title no-overflow">
+					<div>
+						<a href="" class="">
+							<h4 class="item-title no-wrap">
+								{{item.title}}
+							</h4>
 						</a>
 					</div>
-					<div class="item-col item-col-title no-overflow">
-						<div>
-							<a href="" class="">
-								<h4 class="item-title no-wrap">
-									{{this.title}}
-								</h4>
-							</a>
-						</div>
-					</div>
-					<div class="item-col item-col-sales">
-						<div class="item-heading">Sales</div>
-						<div>
-							{{this.sales}}
-						</div>
-					</div>
-					<div class="item-col item-col-stats">
-						<div class="item-heading">Stats</div>
-						<div class="no-overflow">
-							<div class="item-stats sparkline" data-type="bar"></div>	
-						</div>
-					</div>
-					<div class="item-col item-col-date">
-						<div class="item-heading">Published</div>
-						<div>
-							{{this.date}}
-						</div>
+				</div>
+				<div class="item-col item-col-sales">
+					<div class="item-heading">Sales</div>
+					<div>
+						{{item.sales}}
 					</div>
 				</div>
-			</li>
-		{{/each}}
+				<div class="item-col item-col-stats">
+					<div class="item-heading">Stats</div>
+					<div class="no-overflow">
+						<div class="item-stats sparkline" data-type="bar"></div>	
+					</div>
+				</div>
+				<div class="item-col item-col-date">
+					<div class="item-heading">Published</div>
+					<div>
+						{{item.date}}
+					</div>
+				</div>
+			</div>
+		</li>
 	</ul>
 </div>
