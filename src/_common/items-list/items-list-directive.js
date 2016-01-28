@@ -5,21 +5,18 @@ modularAdmin.common
 		restrict: 'A',
 		link: function ($scope, $element, attrs) {
 
-			var $itemActions = $(".item-actions-dropdown");
 			$(document).on('click',function(e) {
 				if (!$(e.target).closest('.item-actions-dropdown').length) {
-					$itemActions.removeClass('active');
+					$(".item-actions-dropdown").removeClass('active');
 				}
 			});
 			
 			$element.on('click',function(e){
 				e.preventDefault();
 
-				var $thisActionList = $(this).closest('.item-actions-dropdown');
-
-				$itemActions.not($thisActionList).removeClass('active');
-
-				$thisActionList.toggleClass('active');	
+				$(".item-actions-dropdown").removeClass('active');
+				
+				$(this).closest('.item-actions-dropdown').addClass('active');	
 			});
 		}
 	};
