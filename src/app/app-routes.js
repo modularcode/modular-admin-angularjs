@@ -22,6 +22,20 @@ modularAdmin.app
 		controller: "DashboardController as DashboardCtrl",
 		data: {
 			pageTitle: '',
+			page: 'dashboard'
+		}
+	})
+
+	// Dashboard state
+	.state('app.itemsList', {
+		url: "/items-list",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/items/list/items-list.html'); 
+		},
+		controller: "ItemsListController as ItemsListCtrl",
+		data: {
+			pageTitle: 'Items',
+			page: 'items-list'
 		}
 	});
 
