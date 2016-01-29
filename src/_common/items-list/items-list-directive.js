@@ -14,9 +14,11 @@ modularAdmin.common
 			$element.on('click',function(e){
 				e.preventDefault();
 
-				$(".item-actions-dropdown").removeClass('active');
+				var $thisActionList = $(this).closest('.item-actions-dropdown');
+
+				$(".item-actions-dropdown").not($thisActionList).removeClass('active');
 				
-				$(this).closest('.item-actions-dropdown').addClass('active');	
+				$thisActionList.toggleClass('active');
 			});
 		}
 	};
