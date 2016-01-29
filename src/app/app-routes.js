@@ -10,7 +10,7 @@ modularAdmin.app
 		templateProvider: function($templateCache) {  
 			return $templateCache.get('templates/app/app.html'); 
 		},
-		controller: "AppController as app"
+		controller: "AppCtrl as app"
 	})
 
 	// Dashboard state
@@ -19,7 +19,7 @@ modularAdmin.app
 		templateProvider: function($templateCache) {  
 			return $templateCache.get('templates/app/dashboard/dashboard.html'); 
 		},
-		controller: "DashboardController as DashboardCtrl",
+		controller: "DashboardCtrl as dashboard",
 		data: {
 			pageTitle: '',
 			page: 'dashboard'
@@ -32,7 +32,7 @@ modularAdmin.app
 		templateProvider: function($templateCache) {  
 			return $templateCache.get('templates/app/items/list/items-list.html'); 
 		},
-		controller: "ItemsListController as ItemsListCtrl",
+		controller: "ItemsListCtrl as itemsList",
 		data: {
 			pageTitle: 'Items',
 			page: 'items-list'

@@ -1,4 +1,4 @@
-<div class="card sameheight-item stats" data-exclude="xs" ng-controller="StatsController as StatsCtrl">
+<div class="card sameheight-item stats" data-exclude="xs" ng-controller="StatsCtrl as stats">
 	<div class="card-block">
 
 		<div class="title-block">
@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="row row-sm stats-container">
-			<div class="col-xs-12 col-sm-6 stat-col" ng-repeat="stat in StatsCtrl.stats">
+			<div class="col-xs-12 col-sm-6 stat-col" ng-repeat="stat in stats.stats">
 				<div class="stat-icon">
 					<i class="fa fa-{{stat.icon}}"></i>
 				</div>

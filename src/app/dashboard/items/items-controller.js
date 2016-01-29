@@ -4,7 +4,7 @@
 
 modularAdmin.app
 
-.controller("DashboardItemsListController", function($log, itemsService) {
+.controller("DashboardItemsListCtrl", function($log, itemsService) {
 
 	var vm = this;
 

@@ -1,4 +1,4 @@
-<aside class="sidebar" ng-controller="SidebarController as SidebarCtrl">
+<aside class="sidebar" ng-controller="SidebarCtrl as sidebar">
 	<div class="sidebar-container">
 
 		<ng-include src="'templates/app/_common/sidebar/header/header.html'" include-replace></ng-include>
@@ -13,7 +13,7 @@
 				</li>
 
 
-				<li ng-class="{'active open': SidebarCtrl.isActive(['app.itemsList', 'app.itemsEditor'])}">
+				<li ng-class="{'active open': sidebar.isActive(['app.itemsList', 'app.itemsEditor'])}">
 
 					<a href="">
 						<i class="fa fa-th-large"></i> Items Manager

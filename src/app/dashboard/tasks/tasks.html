@@ -1,4 +1,4 @@
-<div class="card tasks sameheight-item" data-exclude="xs,sm" ng-controller="TasksController as TasksCtrl">
+<div class="card tasks sameheight-item" data-exclude="xs,sm" ng-controller="TasksCtrl as tasks">
     <div class="card-header bordered">
         <div class="header-block">
             <h3 class="title">
@@ -14,7 +14,7 @@
     <div class="card-block">
         <div class="tasks-block">
             <ul class="item-list" >
-               <li class="item" ng-repeat="task in TasksCtrl.tasks">
+               <li class="item" ng-repeat="task in tasks.tasks">
                    <div class="item-row">
                        <div class="item-col item-col-title">
                            <label>

@@ -6,5 +6,5 @@ module.exports = {
 	destDir: path.resolve("../dist"),				// Build destination
 	bowerDir: "../bower_components",  	// Bower dir
 	npmDir:   "../node_modules",		// Npm dir
-	port: 4000
+	port: 3333
 };

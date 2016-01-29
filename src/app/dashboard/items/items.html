@@ -1,4 +1,4 @@
-<div class="card sameheight-item items" data-exclude="xs,sm,lg" ng-controller="DashboardItemsListController as DashboardItemsListCtrl">
+<div class="card sameheight-item items" data-exclude="xs,sm,lg" ng-controller="DashboardItemsListCtrl as dashboardItemsList">
 	<div class="card-header bordered">
 		<div class="header-block">
 			<h3 class="title">
@@ -49,11 +49,11 @@
 				</div>
 			</div>
 		</li>
-		<li class="item" ng-repeat="item in DashboardItemsListCtrl.items">	
+		<li class="item" ng-repeat="item in dashboardItemsList.items">	
 			<div class="item-row">
 				<div class="item-col fixed item-col-img xs">
 					<a href="">
-						<div class="item-img xs rounded" style="background-image: url({{item.img}})"></div>
+						<div class="item-img xs rounded" ng-style="{'background-image': 'url(' + item.img + ')'}"></div>
 					</a>
 				</div>
 				<div class="item-col item-col-title no-overflow">

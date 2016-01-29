@@ -1,6 +1,6 @@
 modularAdmin.main
 
-.controller("MainController", function ($log, customizeService) {
+.controller("MainCtrl", function ($log, customizeService) {
 
 	var vm = this; 
 

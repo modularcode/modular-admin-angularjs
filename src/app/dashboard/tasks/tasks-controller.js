@@ -4,7 +4,7 @@
 
 modularAdmin.app
 
-.controller("TasksController", function($log, tasksService) {
+.controller("TasksCtrl", function($log, tasksService) {
 
 	var vm = this;
 

@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</li>
-		<li class="item" ng-repeat="item in ItemsListCtrl.items">	
+		<li class="item" ng-repeat="item in itemsList.items">	
 
 			<div class="item-row">
 
@@ -106,7 +106,7 @@
 
 				<div class="item-col fixed item-col-img md">
 					<a href="item-editor.html">
-						<div class="item-img rounded" style="background-image: url({{item.img}})"></div>
+						<div class="item-img rounded" ng-style="{'background-image': 'url(' + item.img + ')'}"></div>
 					</a>
 				</div>
 				<div class="item-col fixed pull-left item-col-title">
