@@ -14,6 +14,17 @@ modularAdmin.app
 		vm.items = data.items;
 	});
 
+	vm.checkedAll = false;
+
+	vm.checkAll = function () {
+        vm.checkedAll = !vm.checkedAll;
+
+        angular.forEach(vm.items, function (item) {
+            item.checked = vm.checkedAll;
+        });
+
+    };
+
 	$log.log("In items list controller");
 
 });

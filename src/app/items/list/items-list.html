@@ -48,7 +48,7 @@
 			<div class="item-row">
 				<div class="item-col fixed item-col-check">
 					<label class="item-check" id="select-all-items">
-						<input type="checkbox" class="checkbox">
+						<input type="checkbox" class="checkbox" ng-click="itemsList.checkAll()">
 						<span></span>
 					</label>
 				</div>
@@ -99,7 +99,7 @@
 				<div class="item-col fixed item-col-check">
 
 					<label class="item-check" id="select-all-items">
-						<input type="checkbox" class="checkbox">
+						<input type="checkbox" class="checkbox" ng-model="item.checked">
 						<span></span>
 					</label>
 				</div>
