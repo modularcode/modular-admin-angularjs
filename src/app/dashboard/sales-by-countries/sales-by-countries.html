@@ -1,4 +1,4 @@
-<div class="card sameheight-item" data-exclude="xs,sm">
+<div class="card sameheight-item" data-exclude="xs,sm" ng-controller="SalesByCountriesCtrl as salesByCountries">
 	<div class="card-header">
 		<div class="header-block">
 	        <h3 class="title">
@@ -7,6 +7,6 @@
 	    </div>
 	</div>
     <div class="card-block">
-        <div id="dashboard-sales-map" style="width: 100%; height: 400px;"></div>
+        <div id="dashboard-sales-map" style="width: 100%; height: 400px;" sales-map sales-data="salesByCountries.countries"></div>
     </div>
 </div>
