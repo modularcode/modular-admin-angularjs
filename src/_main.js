@@ -6,6 +6,9 @@ modularAdmin.main = angular.module("modularAdmin", [
 	'ui.router',
 	'angular-storage', 
 
+	// Vendor modules
+	'angular.morris-chart',
+
 	// Application cached tempaltes
 	"modularAdmin.templates",
 	

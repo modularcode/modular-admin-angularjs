@@ -1,4 +1,4 @@
-<div class="card sameheight-item sales-breakdown" data-exclude="xs,sm,lg">
+<div class="card sameheight-item sales-breakdown" data-exclude="xs,sm,lg" ng-controller="SalesBreakdownCtrl as salesBreakdown">
 	<div class="card-header">
 		<div class="header-block">
 			<h3 class="title">
@@ -7,6 +7,14 @@
 		</div>
 	</div>
     <div class="card-block">
-        <div class="dashboard-sales-breakdown-chart" id="dashboard-sales-breakdown-chart"></div>
+        <div class="dashboard-sales-breakdown-chart" 
+        	id="dashboard-sales-breakdown-chart"
+			donut-chart
+			donut-data='salesBreakdown.options.data'
+			donut-resize='salesBreakdown.options.resize'
+			donut-colors='salesBreakdown.options.colors'
+			donut-formatter='salesBreakdown.options.formatter'
+        ></div>
+
     </div>
 </div>

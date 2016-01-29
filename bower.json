@@ -23,7 +23,8 @@
     "dropzone": "~4.2.0",
     "angular": "~1.4.9",
     "angular-ui-router": "~0.2.15",
-    "a0-angular-storage": "~0.0.13"
+    "a0-angular-storage": "~0.0.13",
+    "angular-morris-chart": "~1.2.0"
   },
   "overrides": {
     "bootstrap": {
@@ -43,6 +44,9 @@
     },
     "flot.tooltip": {
       "main": "js/jquery.flot.tooltip.js"
+    },
+    "angular-morris-chart": {
+      "main": "src/angular-morris-chart.js"
     },
     "jqvmap": {
       "main": [

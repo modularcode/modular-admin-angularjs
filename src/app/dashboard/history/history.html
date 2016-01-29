@@ -1,34 +1,66 @@
-<div class="card sameheight-item" data-exclude="xs">
+<div class="card sameheight-item" data-exclude="xs" ng-controller="HistoryVisitsCtrl as historyVisits">
 	<div class="card-header card-header-sm bordered">
 		<div class="header-block">
 			<h3 class="title">History</h3>
 		</div>
         <ul class="nav nav-tabs pull-right" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" href="#visits" role="tab" data-toggle="tab">Visits</a>
+				<a class="nav-link" href=""
+					ng-class="{active: historyVisits.isActiveTab('visits')}"
+					ng-click="historyVisits.setTab('visits')">Visits</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#downloads" role="tab" data-toggle="tab">Downloads</a>
+				<a class="nav-link" href=""
+					ng-class="{active: historyVisits.isActiveTab('downloads')}"
+					ng-click="historyVisits.setTab('downloads')">Downloads</a>
 			</li>
 		</ul>
     </div>
-	<div class="card-block">
-		
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active fade in" id="visits">
+	<div class="card-block">	
+		<div ng-if="historyVisits.isActiveTab('visits')" >
 				<p class="title-description">
 					Number of unique visits last 30 days
 				</p>
-
-				<div id="dashboard-visits-chart"></div>
+				<div
+					id="dashboard-visits-chart"
+					line-chart
+					line-data='[
+					    { y: "2006", a: 100, b: 90 },
+					    { y: "2007", a: 75,  b: 65 },
+					    { y: "2008", a: 50,  b: 40 },
+					    { y: "2009", a: 75,  b: 65 },
+					    { y: "2010", a: 50,  b: 40 },
+					    { y: "2011", a: 75,  b: 65 },
+					    { y: "2012", a: 100, b: 90 }
+					]'
+					line-resize='true'
+					line-xkey='y'
+					line-ykeys='["a", "b"]'
+					line-labels='["Serie A", "Serie B"]'
+					line-colors='["#31C0BE", "#c7254e"]'>
+				</div>
 			</div>
-			<div role="tabpanel" class="tab-pane fade" id="downloads">
+			<div ng-if="historyVisits.isActiveTab('downloads')">
 				<p class="title-description">
 					Number of downloads last 30 days
 				</p>
-
-				<div id="dashboard-downloads-chart"></div>
+				<div
+					id="dashboard-downloads-chart"
+					bar-chart 
+					bar-data='[
+					    { y: "2006", a: 100, b: 90 },
+					    { y: "2007", a: 75,  b: 65 },
+					    { y: "2008", a: 50,  b: 40 },
+					    { y: "2009", a: 75,  b: 65 },
+					    { y: "2010", a: 50,  b: 40 },
+					    { y: "2011", a: 75,  b: 65 },
+					    { y: "2012", a: 100, b: 90 }
+					]'
+					bar-x='y'
+					bar-y='["a", "b"]'
+					bar-labels='["Series A", "Series B"]'
+					bar-colors='["#31C0BE", "#c7254e"]'>
+					</div>
 			</div>
-		</div>
 	</div>
 </div>
