@@ -6,16 +6,15 @@ modularAdmin.app
 		
 		setStyleLink();
 
-		$rootScope.$watch('settings.themeName', function(){
+		$rootScope.$watch('settings.color', function(){
 			setStyleLink();
 		});
 
 		function setStyleLink(){
 			var themeStyleUrl = "css/app.css";
-			var themeColor = $rootScope.settings.themeName;
 
-			if (themeColor) {
-				themeStyleUrl = "css/app-" + themeColor + ".css";
+			if ($rootScope.settings.color) {
+				themeStyleUrl = "css/app-" + $rootScope.settings.color + ".css";
 			} 
 			
 			$element.prop('href', themeStyleUrl);

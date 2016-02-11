@@ -24,7 +24,7 @@
 			                        	type="radio" 
 			                        	ng-model="settings.sidebarFixed" 
 			                        	ng-value="true" 
-			                        	ng-click="customize.setThemeState()">
+			                        	>
 			                        <span></span>
 			                    </label>
 							</div>
@@ -34,7 +34,7 @@
 			                        	type="radio" 
 			                        	ng-model="settings.sidebarFixed" 
 			                        	ng-value="false"
-			                        	ng-click="customize.setThemeState()">
+			                        	>
 			                        <span></span>
 			                    </label>
 							</div>
@@ -49,7 +49,7 @@
 				                        type="radio" 
 				                        ng-model="settings.headerFixed" 
 				                        ng-value="true"
-				                        ng-click="customize.setThemeState()">
+				                        >
 			                        <span></span>
 			                    </label>
 							</div>
@@ -59,7 +59,7 @@
 				                        type="radio" 
 				                        ng-model="settings.headerFixed" 
 				                        ng-value="false"
-				                        ng-click="customize.setThemeState()">
+				                        >
 			                        <span></span>
 			                    </label>
 							</div>
@@ -74,7 +74,7 @@
 			                        	type="radio" 
 			                        	ng-model="settings.footerFixed" 
 			                        	ng-value="true"
-			                        	ng-click="customize.setThemeState()">
+			                        	>
 			                        <span></span>
 			                    </label>
 							</div>
@@ -84,7 +84,7 @@
 			                        type="radio" 
 			                        ng-model="settings.footerFixed" 
 			                        ng-value="false"
-			                        ng-click="customize.setThemeState()">
+			                        >
 			                        <span></span>
 			                    </label>
 							</div>
@@ -94,32 +94,32 @@
 						<ul class="customize-colors">
 							<li>
 								<span class="color-item color-red" 
-									ng-class="{active: settings.themeName === 'red'}"
+									ng-class="{active: settings.color === 'red'}"
 									ng-click="customize.setThemeColor('red')"></span>
 							</li>
 							<li>
 								<span class="color-item color-orange" 
-									ng-class="{active: settings.themeName === 'orange'}"
+									ng-class="{active: settings.color === 'orange'}"
 									ng-click="customize.setThemeColor('orange')"></span>
 							</li>
 							<li>
 								<span class="color-item color-green" 
-									ng-class="{active: settings.themeName === 'green'}"
+									ng-class="{active: settings.color === 'green'}"
 									ng-click="customize.setThemeColor('green')"></span>
 							</li>
 							<li>
 								<span class="color-item color-seagreen" 
-									ng-class="{active: settings.themeName === 'seagreen'}"
+									ng-class="{active: settings.color === 'seagreen'}"
 									ng-click="customize.setThemeColor('seagreen')"></span>
 							</li>
 							<li>
 								<span class="color-item color-blue" 
-									ng-class="{active: settings.themeName === ''}"
+									ng-class="{active: settings.color === ''}"
 									ng-click="customize.setThemeColor('')"></span>
 							</li>
 							<li>
 								<span class="color-item color-purple" 
-									ng-class="{active: settings.themeName === 'purple'}"
+									ng-class="{active: settings.color === 'purple'}"
 									ng-click="customize.setThemeColor('purple')"></span>
 							</li>
 						</ul>
