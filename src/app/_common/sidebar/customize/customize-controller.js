@@ -3,7 +3,7 @@
 */
 modularAdmin.app
 
-.controller("CustomizeCtrl", function($rootScope, $log, localStorage) {
+.controller("CustomizeCtrl", function($rootScope, localStorage, $log) {
 
 	var vm = this;
 
@@ -27,7 +27,10 @@ modularAdmin.app
 	function getThemeSettings() {
 		var settings = (localStorage.get('themeSettings')) ? JSON.parse(localStorage.get('themeSettings')) : {};
 
+		// theme color option
 		settings.color = settings.color || '';
+
+		// theme states options
 		settings.headerFixed = settings.headerFixed || false;
 		settings.sidebarFixed = settings.sidebarFixed || false;
 		settings.footerFixed = settings.footerFixed || false;

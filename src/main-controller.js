@@ -4,7 +4,11 @@ modularAdmin.main
 
 	var vm = this; 
 	
+	// theme settings 
 	$rootScope.settings = {};
+
+	// theme settings 
+	$rootScope.uiState = {};
 
 	$log.log("Main Controller");
 

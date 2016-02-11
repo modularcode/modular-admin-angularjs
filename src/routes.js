@@ -9,7 +9,7 @@ modularAdmin.main
 
 	$rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams){
         if (toState.data && toState.data.page) {
-        	$rootScope.settings.page = toState.data.page;
+        	$rootScope.uiState.page = toState.data.page;
         }
   	});
 
