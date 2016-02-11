@@ -1,24 +1,22 @@
 modularAdmin.app
 
-.directive('themeLink', function($log, customizeService) {
+.directive('themeStyles', function($rootScope, $log) {
 
 	function link($scope, $element) {
 		
 		setStyleLink();
 
-		$scope.$watch('themeColor', function(){
+		$rootScope.$watch('settings.themeName', function(){
 			setStyleLink();
 		});
 
 		function setStyleLink(){
-			var themeStyleUrl = "css/";
+			var themeStyleUrl = "css/app.css";
+			var themeColor = $rootScope.settings.themeName;
 
-			if($scope.themeColor) {
-				themeStyleUrl += "app-" + $scope.themeColor + ".css";
+			if (themeColor) {
+				themeStyleUrl = "css/app-" + themeColor + ".css";
 			} 
-			else {
-				themeStyleUrl += "app.css";
-			}
 			
 			$element.prop('href', themeStyleUrl);
 		}
@@ -28,10 +26,6 @@ modularAdmin.app
 	return({
 		restrict: "A",
 		link: link,
-		controller: "CustomizeCtrl",
-		scope: {
-			themeColor: '@'
-		}
 	});
 
 });

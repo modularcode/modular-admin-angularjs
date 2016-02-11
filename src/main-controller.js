@@ -1,16 +1,11 @@
 modularAdmin.main
 
-.controller("MainCtrl", function ($log, customizeService) {
+.controller("MainCtrl", function ($rootScope, $log) {
 
 	var vm = this; 
+	
+	$rootScope.settings = {};
 
 	$log.log("Main Controller");
-
-	/***********************************************
-	*	  Attach App Components to app viewmodel
-	************************************************/
-
-	//get theme settings
-	vm.themeSettings = customizeService;
 
 });

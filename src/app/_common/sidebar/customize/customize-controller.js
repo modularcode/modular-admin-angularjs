@@ -1,47 +1,43 @@
 /*
 *	Customize controller
 */
-
 modularAdmin.app
 
-.controller("CustomizeCtrl", function($log, customizeService) {
+.controller("CustomizeCtrl", function($rootScope, $log, localStorage) {
 
 	var vm = this;
 
-	vm.themeSettings = {
+	// set default settings
+	var defaults = {
 		themeName: '',
 		sidebarFixed: false,
 		headerFixed: false,
 		footerFixed: false
 	}
 
-	if (customizeService.getThemeSettings()) {
-		vm.themeSettings = customizeService.getThemeSettings();
-	}
+	// get theme settings
+	$rootScope.settings = getThemeSettings() || defaults;
 
+	// set theme state
 	vm.setThemeState = function(){
-		customizeService.setThemeSettings(vm.themeSettings);
+		setThemeSettings($rootScope.settings);
 	}
 
-	vm.setThemeColor = function(themeColor){
-		vm.themeSettings.themeName = themeColor;
-		customizeService.setThemeSettings(vm.themeSettings);
+	// set theme color
+	vm.setThemeColor = function(color){
+		$rootScope.settings.themeName = color;
+		setThemeSettings($rootScope.settings);
 	}
 
-	/***************************************
-	*		   Customize Controls
-	****************************************/
-
-	vm.controls = {};
-
-	vm.controls.getThemeSettingItem = function(settingName){
-		return vm.themeSettings[settingName];
+	function getThemeSettings(){
+		var settings = localStorage.get('themeSettings');
+		if (!angular.isUndefined(settings)) {
+			return JSON.parse(settings);
+		}
 	}
 
+	function setThemeSettings(settings){
+		localStorage.set('themeSettings', JSON.stringify(settings));
+	}
 
-	/**********************************************
-	*	 External API through Customize factory
-	***********************************************/
-
-	customizeService.controls = vm.controls;
 });

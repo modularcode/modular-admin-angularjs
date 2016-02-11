@@ -22,7 +22,7 @@
 								<label>
 			                        <input class="radio" 
 			                        	type="radio" 
-			                        	ng-model="customize.themeSettings.sidebarFixed" 
+			                        	ng-model="settings.sidebarFixed" 
 			                        	ng-value="true" 
 			                        	ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -32,7 +32,7 @@
 								<label>
 			                        <input class="radio" 
 			                        	type="radio" 
-			                        	ng-model="customize.themeSettings.sidebarFixed" 
+			                        	ng-model="settings.sidebarFixed" 
 			                        	ng-value="false"
 			                        	ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -47,7 +47,7 @@
 								<label>
 			                        <input class="radio" 
 				                        type="radio" 
-				                        ng-model="customize.themeSettings.headerFixed" 
+				                        ng-model="settings.headerFixed" 
 				                        ng-value="true"
 				                        ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -57,7 +57,7 @@
 								<label>
 			                        <input class="radio" 
 				                        type="radio" 
-				                        ng-model="customize.themeSettings.headerFixed" 
+				                        ng-model="settings.headerFixed" 
 				                        ng-value="false"
 				                        ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -72,7 +72,7 @@
 								<label>
 			                        <input class="radio" 
 			                        	type="radio" 
-			                        	ng-model="customize.themeSettings.footerFixed" 
+			                        	ng-model="settings.footerFixed" 
 			                        	ng-value="true"
 			                        	ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -82,7 +82,7 @@
 								<label>
 			                        <input class="radio" 
 			                        type="radio" 
-			                        ng-model="customize.themeSettings.footerFixed" 
+			                        ng-model="settings.footerFixed" 
 			                        ng-value="false"
 			                        ng-click="customize.setThemeState()">
 			                        <span></span>
@@ -94,32 +94,32 @@
 						<ul class="customize-colors">
 							<li>
 								<span class="color-item color-red" 
-									ng-class="{active: customize.themeSettings.themeName === 'red'}"
+									ng-class="{active: settings.themeName === 'red'}"
 									ng-click="customize.setThemeColor('red')"></span>
 							</li>
 							<li>
 								<span class="color-item color-orange" 
-									ng-class="{active: customize.themeSettings.themeName === 'orange'}"
+									ng-class="{active: settings.themeName === 'orange'}"
 									ng-click="customize.setThemeColor('orange')"></span>
 							</li>
 							<li>
 								<span class="color-item color-green" 
-									ng-class="{active: customize.themeSettings.themeName === 'green'}"
+									ng-class="{active: settings.themeName === 'green'}"
 									ng-click="customize.setThemeColor('green')"></span>
 							</li>
 							<li>
 								<span class="color-item color-seagreen" 
-									ng-class="{active: customize.themeSettings.themeName === 'seagreen'}"
+									ng-class="{active: settings.themeName === 'seagreen'}"
 									ng-click="customize.setThemeColor('seagreen')"></span>
 							</li>
 							<li>
 								<span class="color-item color-blue" 
-									ng-class="{active: customize.themeSettings.themeName === ''}"
+									ng-class="{active: settings.themeName === ''}"
 									ng-click="customize.setThemeColor('')"></span>
 							</li>
 							<li>
 								<span class="color-item color-purple" 
-									ng-class="{active: customize.themeSettings.themeName === 'purple'}"
+									ng-class="{active: settings.themeName === 'purple'}"
 									ng-click="customize.setThemeColor('purple')"></span>
 							</li>
 						</ul>

@@ -21,7 +21,6 @@ modularAdmin.app
 		},
 		controller: "DashboardCtrl as dashboard",
 		data: {
-			pageTitle: '',
 			page: 'dashboard'
 		}
 	})
@@ -34,7 +33,6 @@ modularAdmin.app
 		},
 		controller: "ItemsListCtrl as itemsList",
 		data: {
-			pageTitle: 'Items',
 			page: 'items-list'
 		}
 	});
