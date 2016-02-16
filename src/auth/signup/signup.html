@@ -1,0 +1,127 @@
+<div class="auth-container">
+	<div class="card">
+		<header class="auth-header">
+			<h1 class="auth-title">
+			<ng-include src="'templates/_common/logo/logo.html'"></ng-include>
+			ModularAdmin
+		</h1>
+		</header>
+		<div class="auth-content">
+			<p class="text-xs-center">SIGNUP TO GET INSTANT ACCESS</p>
+			<form id="signup-form" novalidate="" name="signupForm" >
+				<div class="form-group" 
+					ng-class="{'has-error': signupForm.$submitted && (
+						signupForm.firstname.$error.required ||
+						signupForm.lastname.$error.required
+					)}">
+					<label for="firstname" >Name</label>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" 
+								class="form-control underlined" 
+								name="firstname" 
+								id="firstname" 
+								placeholder="Enter firstname" 
+								ng-model="signup.data.firstname"
+								required="">
+						</div>
+						<div class="col-sm-6">
+							<input type="text" 
+								class="form-control underlined" 
+								name="lastname" 
+								id="lastname" 
+								placeholder="Enter lastname" 
+								ng-model="signup.data.lastname"
+								required="">
+						</div>
+					</div>
+					<span class="has-error" 
+						ng-show="signupForm.$submitted && (
+							signupForm.firstname.$error.required ||
+							signupForm.lastname.$error.required
+						)">Please enter firstname and lastname</span>
+				</div>
+				<div class="form-group"
+					ng-class="{'has-error': signupForm.$submitted && (
+						signupForm.email.$error.required ||
+						signupForm.email.$error.email
+					)}">
+					<label for="email" >Email</label>
+					<input type="email" 
+						class="form-control underlined" 
+						name="email" 
+						id="email" 
+						placeholder="Enter email address" 
+						ng-model="signup.data.email"
+						required="">
+					<span class="has-error" ng-show="signupForm.$submitted && signupForm.email.$error.required">Please enter your email</span>
+                    <span class="has-error" ng-show="signupForm.$submitted && signupForm.email.$error.email">Please enter a valid email address</span>
+				</div>
+				<div class="form-group"
+					ng-class="{'has-error': signupForm.$submitted && (
+						signupForm.password.$error.required || 
+						signupForm.retype_password.$error.required ||
+						(signupForm.password.$invalid && signupForm.password.$dirty) || 
+						(signupForm.retype_password.$invalid && signupForm.retype_password.$dirty)
+					)}">
+					<label for="password" >Password</label>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="password" 
+								class="form-control underlined" 
+								name="password" 
+								id="password" 
+						  		placeholder="Enter password" 
+						  		ng-model="signup.data.password"
+						  		required="">
+						</div>
+						<div class="col-sm-6">
+							<input type="password" 
+								class="form-control underlined" 
+								name="retype_password" 
+								id="retype_password" 
+								placeholder="Re-type password" 
+								ng-model="signup.data.password2"
+								match="signup.data.password"
+								required="">
+						</div>
+					</div>
+					
+					<span class="has-error" 
+						ng-show="signupForm.$submitted && (
+							signupForm.password.$error.required || 
+							signupForm.retype_password.$error.required
+						)">Please enter password fields.</span>
+					<span class="has-error" 
+				        ng-show="signupForm.$submitted && (
+				            (signupForm.password.$invalid && signupForm.password.$dirty) || 
+				            (signupForm.retype_password.$invalid && signupForm.retype_password.$dirty)
+				        )">Passwords doesn't match.</span>
+				</div>
+				<div class="form-group">
+					<label for="agree">
+						<input class="checkbox" 
+							name="agree" 
+							id="agree" 
+							type="checkbox" 
+							required=""> 
+						<span>Agree the terms and <a href="#">policy</a></span>
+					</label>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-block btn-primary">Sign Up</button>
+				</div>
+				<div class="form-group">
+					<p class="text-muted text-xs-center">Already have an account? <a ui-sref="auth.login">Login!</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="text-xs-center">
+		<a ui-sref="app.dashboard" class="btn btn-secondary rounded btn-sm">
+			<i class="fa fa-arrow-left"></i> Back to dashboard
+		</a>
+	</div>
+</div>

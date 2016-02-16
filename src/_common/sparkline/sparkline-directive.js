@@ -7,7 +7,7 @@ modularAdmin.common
 
 			drawSparkline();
 			
-			$(document).on("themechange", function(){
+			$rootScope.$watch('settings.chart.colorPrimary', function(){
 				drawSparkline();
 			})
 

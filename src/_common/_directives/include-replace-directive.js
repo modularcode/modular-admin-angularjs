@@ -1,4 +1,5 @@
 modularAdmin.common
+
 .directive('includeReplace', function () {
     return {
         require: 'ngInclude',

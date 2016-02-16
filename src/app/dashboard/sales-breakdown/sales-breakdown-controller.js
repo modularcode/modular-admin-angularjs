@@ -4,7 +4,7 @@
 
 modularAdmin.app
 
-.controller("SalesBreakdownCtrl", function($log, salesService) {
+.controller("SalesBreakdownCtrl", function($rootScope, $log, salesService) {
 
     var vm = this;
 
@@ -13,7 +13,14 @@ modularAdmin.app
 
     vm.options.resize = true;
     vm.options.formatter = "currency";
-    vm.options.colors = ["#31C0BE","#c7254e","#98a0d3"];
+
+    if ($rootScope.settings.chart) {        
+       /* vm.options.colors = [
+            tinycolor($rootScope.settings.chart.colorPrimary).lighten(10).toString(),
+            tinycolor($rootScope.settings.chart.colorPrimary).darken(8).toString(),
+            $rootScope.settings.chart.colorPrimary
+        ];*/
+    }
 
     // get breakdown data
     salesService.get()
