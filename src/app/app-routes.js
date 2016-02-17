@@ -50,6 +50,7 @@ modularAdmin.app
 		}
 	})
 
+	// Static tables page
 	.state('app.staticTables', {
 		url: "/static-tables",
 		templateProvider: function($templateCache) {  
@@ -58,6 +59,18 @@ modularAdmin.app
 		controller: "StaticTablesCtrl as staticTables",
 		data: {
 			page: 'static-tables'
+		}
+	})
+
+	// Forms page
+	.state('app.forms', {
+		url: "/forms",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/forms/forms.html'); 
+		},
+		controller: "FormsCtrl as forms",
+		data: {
+			page: 'forms'
 		}
 	});
 
