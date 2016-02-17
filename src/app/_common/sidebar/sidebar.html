@@ -56,21 +56,21 @@
 					</ul>
 				</li>
 
-				<li ui-sref-active="active open">
+				<li  ng-class="{'active open': sidebar.isActive(['app.staticTables', 'app.responsiveTables'])}" >
 					<a href="">
 						<i class="fa fa-table"></i> Tables
 						<i class="fa arrow"></i>
 					</a>
 
 					<ul>
-						<li>
-							<a ui-sref="app.tablesStatic">
+						<li ui-sref-active="active">
+							<a ui-sref="app.staticTables">
 								Static Tables
 							</a>
 						</li>
 
-						<li>
-							<a ui-sref="app.tablesResponsive">
+						<li ui-sref-active="active">
+							<a ui-sref="app.responsiveTables">
 								Responsive Tables
 							</a>
 						</li>

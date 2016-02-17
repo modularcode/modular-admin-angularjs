@@ -25,7 +25,7 @@ modularAdmin.app
 		}
 	})
 
-	// Dashboard state
+	// Items list page
 	.state('app.itemsList', {
 		url: "/items-list",
 		templateProvider: function($templateCache) {  
@@ -34,6 +34,30 @@ modularAdmin.app
 		controller: "ItemsListCtrl as itemsList",
 		data: {
 			page: 'items-list'
+		}
+	})
+
+
+	// Responsive tables page
+	.state('app.responsiveTables', {
+		url: "/responsive-tables",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/tables/responsive-tables/responsive-tables.html'); 
+		},
+		controller: "ResponsiveTablesCtrl as responsiveTables",
+		data: {
+			page: 'responsive-tables'
+		}
+	})
+
+	.state('app.staticTables', {
+		url: "/static-tables",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/tables/static-tables/static-tables.html'); 
+		},
+		controller: "StaticTablesCtrl as staticTables",
+		data: {
+			page: 'static-tables'
 		}
 	});
 
