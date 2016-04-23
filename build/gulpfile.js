@@ -34,7 +34,8 @@ gulp.task('build', buildTasks);
 gulp.task('connect', function() {
 	plugins.connect.server({
 		root: config.destDir,
-		port: config.port || 3333,
+		port: config.port,
+		host: config.host,
 		livereload: true
 	});
 });

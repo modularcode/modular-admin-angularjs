@@ -72,6 +72,18 @@ modularAdmin.app
 		data: {
 			page: 'forms'
 		}
+	})
+	
+	// Buttons page
+	.state('app.buttons', {
+		url: "/buttons",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/ui-elements/buttons/buttons.html'); 
+		},
+		controller: "ButtonsCtrl as buttons",
+		data: {
+			page: 'forms'
+		}
 	});
 
 });
