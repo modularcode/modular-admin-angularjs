@@ -1,5 +1,5 @@
 /*
-*	Controller for dashboard state
+*	Controller for buttons state
 */
 
 modularAdmin.app

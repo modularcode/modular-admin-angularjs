@@ -1,7 +1,3 @@
----
-layout: app/app-layout
-pagename: cards
----
 <div class="title-block">
 	<h3 class="title">
 		Cards
@@ -12,17 +8,17 @@ pagename: cards
 </div>
 
 <section class="section">
-	{{> app/ui-elements/cards/card-block/card-block}}
+	<ng-include src="'templates/app/ui-elements/cards/card-block/card-block.html'" include-replace></ng-include>
 </section>
 
 <section class="section">
 	<div class="row sameheight-container">
 	    <div class="col-xl-6">
-	      	{{> app/ui-elements/cards/tabs/basic-tabs}}
+	      	<ng-include src="'templates/app/ui-elements/cards/tabs/basic-tabs.html'" include-replace></ng-include>
 	    </div>
 	    <!-- /.col-xl-6 -->
 	    <div class="col-xl-6">
-	    	{{> app/ui-elements/cards/tabs/pill-tabs}}
+	    	<ng-include src="'templates/app/ui-elements/cards/tabs/pill-tabs.html'" include-replace></ng-include>
 	    </div>
 	    <!-- /.col-xl-6 -->
 	</div>

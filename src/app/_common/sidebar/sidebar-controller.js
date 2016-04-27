@@ -9,6 +9,8 @@ modularAdmin.app
 	var vm = this;
 
 	vm.isActive = function(states){
+		var states = states.split(",");
+		
 		var currentState = $state.current.name;
 
 		if (states.indexOf(currentState) >= 0) {

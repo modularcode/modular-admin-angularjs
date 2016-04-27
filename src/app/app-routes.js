@@ -82,7 +82,55 @@ modularAdmin.app
 		},
 		controller: "ButtonsCtrl as buttons",
 		data: {
-			page: 'forms'
+			page: 'buttons'
+		}
+	})
+	
+	// Cards page
+	.state('app.cards', {
+		url: "/cards",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/ui-elements/cards/cards.html'); 
+		},
+		controller: "CardsCtrl as cards",
+		data: {
+			page: 'cards'
+		}
+	})
+	
+	// Grid page
+	.state('app.grid', {
+		url: "/grid",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/ui-elements/grid/grid.html'); 
+		},
+		controller: "GridCtrl as grid",
+		data: {
+			page: 'grid'
+		}
+	})
+	
+	// Icons page
+	.state('app.icons', {
+		url: "/icons",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/ui-elements/icons/icons.html'); 
+		},
+		controller: "IconsCtrl as icons",
+		data: {
+			page: 'icons'
+		}
+	})
+	
+	// Typography page
+	.state('app.typography', {
+		url: "/typography",
+		templateProvider: function($templateCache) {  
+			return $templateCache.get('templates/app/ui-elements/typography/typography.html'); 
+		},
+		controller: "TypographyCtrl as typography",
+		data: {
+			page: 'typography'
 		}
 	});
 
